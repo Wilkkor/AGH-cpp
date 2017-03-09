@@ -7,6 +7,8 @@
 
 #include <iostream>
 #include <string>
+#include <fstream>
+
 using namespace std;
 
 string PolybiusCrypt(std::string message);
