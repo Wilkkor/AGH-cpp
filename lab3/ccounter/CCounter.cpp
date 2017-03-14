@@ -24,6 +24,10 @@ namespace ccounter{
     }
     int Counts(const std::unique_ptr<Counter> &counter, std::string key)
     {
+        if((counter)->mapa.find(key)==(counter)->mapa.end())
+        {
+            return 0;
+        }
         return counter->mapa[key];
     }
     void SetCountsTo(std::string key, int value, std::unique_ptr<Counter> *counter)

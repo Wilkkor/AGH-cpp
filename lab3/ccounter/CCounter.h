@@ -12,7 +12,6 @@ using namespace std;
 namespace ccounter{
     struct Counter{
         map<string,int> mapa;
-        int i;
     };
     std::unique_ptr<Counter> Init();
     void Inc(std::string key, std::unique_ptr<Counter> *counter);
