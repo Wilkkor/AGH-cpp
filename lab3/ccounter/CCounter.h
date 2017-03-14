@@ -10,7 +10,10 @@
 #include <iostream>
 using namespace std;
 namespace ccounter{
-    struct Counter;
+    struct Counter{
+        map<string,int> mapa;
+        int i;
+    };
     std::unique_ptr<Counter> Init();
     void Inc(std::string key, std::unique_ptr<Counter> *counter);
     int Counts(const std::unique_ptr<Counter> &counter, std::string key);

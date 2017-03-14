@@ -4,10 +4,7 @@
 
 #include "CCounter.h"
 namespace ccounter{
-    struct Counter{
-        map<string,int> mapa;
-        int i;
-    };
+
     std::unique_ptr<Counter> Init()
     {
         unique_ptr<Counter> p = make_unique<Counter>();
