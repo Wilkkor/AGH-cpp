@@ -67,6 +67,60 @@ namespace datastructures{
     }
     std::unique_ptr <SmartTree> RestoreTree(const std::string &tree)
     {
-
+        unique_ptr <SmartTree> root;
+        int i=1,j,k,nawiasy;
+        string tonumber="";
+        root=CreateLeaf(0);
+        while(tree[i]!=' '&&tree[i]!=']')
+        {
+            tonumber+=tree[i];
+            i++;
+        }
+        if(tonumber=="none")
+            return NULL;
+        if(tonumber!="none"&&tonumber[0]=='-')
+        {
+            k=1;
+            while (k<tonumber.size())
+            {
+                root->value=10*root->value+tonumber[k]-'0';
+                k++;
+            }
+            root->value*=-1;
+        }
+        if(tonumber!="none"&&tonumber[0]!='-')
+        {
+            k=0;
+            while (k<tonumber.size())
+            {
+                root->value=10*root->value+tonumber[k]-'0';
+                k++;
+            }
+        }
+        i+=1;
+        j=i;
+        nawiasy=1;
+        while(nawiasy>0)
+        {
+            i++;
+            if(tree[i]=='[')
+                nawiasy++;
+            if(tree[i]==']')
+                nawiasy--;
+        }
+        root->left=RestoreTree(tree.substr(j,i-1));
+        j=i+2;
+        i+=2;
+        nawiasy=1;
+        while(nawiasy>0)
+        {
+            i++;
+            if(tree[i]=='[')
+                nawiasy++;
+            if(tree[i]==']')
+                nawiasy--;
+        }
+        root->right=RestoreTree(tree.substr(j,i-1));
+        return root;
     }
 }
