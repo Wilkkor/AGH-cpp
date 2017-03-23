@@ -11,7 +11,7 @@
 
 using ::nets::View;
 using ::std::make_unique;
-//using ::utility::FromString;
+using ::utility::FromString;
 
 using TestArgument = std::pair<std::string, std::unordered_map<std::string, std::string>>;
 using TestExpected = std::string;
