@@ -2,5 +2,5 @@ project(lab3)
 
 add_subdirectory_if_exists(square)
 add_subdirectory_if_exists(name)
-add_subdirectory_if_exists(ccounter)
+add_subdirectory_if_exists(netstemplateengine)
 add_subdirectory_if_exists(minimaltimedifference)
