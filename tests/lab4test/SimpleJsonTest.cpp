@@ -13,7 +13,7 @@ using ::nets::JsonValue;
 using ::std::vector;
 using ::std::string;
 using ::std::map;
-using ::utility::FromString;
+//using ::utility::FromString;
 using ::std::regex;
 using ::std::regex_match;
 using namespace ::std::literals;
@@ -59,7 +59,7 @@ TEST_P(SimpleJsonTestTests, CreationOfTrickyJsonObjectsWithTrickyNameValues) {
   JsonValue str_value{0};
   string expected_str;
   std::bind(GetParam(), str_value, expected_str);
-  JsonValue obj_value{{str_value.ToString(), JsonValue{10}}};
+  JsonValue obj_value{map<string, JsonValue>{{str_value.ToString(), JsonValue{10}}}};
   auto expected = "{" + expected_str + ": 10}";
   EXPECT_EQ(expected, obj_value.ToString());
 }
