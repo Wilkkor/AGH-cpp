@@ -36,7 +36,7 @@ TEST_P(CCounterTest, DefineMethod_Init_Encode_Decode) {
   }
 
   auto expected = arg.second;
-  for (auto p :expected) {
+  for (auto p : expected) {
     auto expected = p.second;
     auto key = p.first;
     EXPECT_EQ(expected, Counts(counter, key));
