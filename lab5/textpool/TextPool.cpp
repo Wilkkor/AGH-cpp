@@ -10,19 +10,24 @@ TextPool::TextPool(const std::initializer_list<experimental::string_view> &eleme
 TextPool::TextPool() : s()
 {}
 
+//TextPool::TextPool(TextPool const &other) {
+//    this->s=other.s;
+//}
 
-TextPool::TextPool(TextPool && that) noexcept: s()
-{
-    swap(*this,that);
+TextPool::TextPool(TextPool &&that){
+    *this=move(that);
 }
 
 TextPool & TextPool::operator=(TextPool && that) noexcept
 {
     if(this==&that)
         return that;
-    this->s.clear();
-    swap(*this, that);
+    this->s=that.s;
+    that.s.clear();
     return *this;
+}
+TextPool::~TextPool() {
+    s.clear();
 }
 
 

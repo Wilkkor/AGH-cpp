@@ -22,10 +22,11 @@ namespace pool
         //konstruktor z listą inicjalizacyjną
     public:
         TextPool();
+        ~TextPool();
         TextPool(const std::initializer_list<experimental::string_view > &elements);
-        TextPool(TextPool const & other)= delete;
+        TextPool(TextPool const & other)=delete;
         TextPool &operator=(TextPool const & other)= delete;
-        TextPool(TextPool&& that) noexcept;
+        TextPool(TextPool&& that) ;
         TextPool& operator=(TextPool&& that) noexcept;
 
 
