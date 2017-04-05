@@ -7,7 +7,15 @@ using namespace std;
 
 namespace algebra {
 
-    Matrix::Matrix(const std::initializer_list<std::initializer_list<std::complex<double>>>& list) : d_row(list.size()), d_col((*list.begin()).size()) {
+//    Matrix::Matrix(const std::initializer_list<std::initializer_list<std::complex<double>>>& list) : d_row(list.size()), d_col((*list.begin()).size()) {
+//        matrix.reserve(d_row);
+//
+//        for (const auto& l : list) {
+//            matrix.emplace_back(l);
+//        }
+//    }
+
+    Matrix::Matrix(const std::initializer_list<std::vector<std::complex<double>>>& list) : d_row(list.size()), d_col((*list.begin()).size()) {
         matrix.reserve(d_row);
 
         for (const auto& l : list) {

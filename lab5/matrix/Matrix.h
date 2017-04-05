@@ -16,14 +16,15 @@ namespace algebra {
 
     class Matrix {
 
-    public:
-
+    private:
         int d_row;
         int d_col;
         vector<vector<std::complex<double>>> matrix;
 
+    public:
         Matrix(int, int);
-        Matrix(const std::initializer_list<std::initializer_list<std::complex<double> > >& list);
+//        Matrix(const std::initializer_list<std::initializer_list<std::complex<double> > >& list);
+        Matrix(const std::initializer_list<std::vector<std::complex<double> > >& list);
         Matrix(const algebra::Matrix&);
         Matrix();
 
