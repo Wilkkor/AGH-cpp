@@ -11,6 +11,6 @@ int main()
     cout<<a.Distance(b)<<endl;
     cin>>c;
     cout<<c.GetX()<<" "<<c.GetY()<<endl;
-    //cout<<c.Distance(a)<<endl;//W tym przypadku pojawia się błąd, że Point jest nieosiągalny z Point3d
-    //cout<<a<<endl; //Operator << nie ma przypisania dla Point3d
+    //cout<<c.Distance(a)<<endl;//W tym przypadku pojawia się błąd, gdyż point nie ma funkcji przyjmującej Point3d ajko argument
+    //cout<<a<<endl; //Operator << nie jest przypisany dla Point3d więc kompilator zasygnalizuje error braku przypisania
 }
