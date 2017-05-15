@@ -1,3 +1,3 @@
-project(lab9)
+project(lab8)
 
-add_subdirectory_if_exists(academiaserializer)
+add_subdirectory_if_exists(prowiant)
