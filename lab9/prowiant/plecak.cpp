@@ -18,9 +18,8 @@ void plecak :: pack(prowiant item) {
 };
 
 void plecak :: print_out() {
-    for(int i=0;i<free_space;i++)
+    for(prowiant base : products)
     {
-        const prowiant a=products[i];
-        cout<<a.get_name<<endl;
+        cout<<base.get_name()<<endl;
     }
 };

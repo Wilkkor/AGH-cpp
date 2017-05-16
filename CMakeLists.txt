@@ -3,6 +3,7 @@ project(jimp_exercises)
 
 set(CMAKE_CXX_STANDARD 14)
 
+
 macro(add_subdirectory_if_exists DIR)
     #    message("add_subdirectory_if_exists")
     string(TOUPPER "${DIR}" DIR_UPPER)
