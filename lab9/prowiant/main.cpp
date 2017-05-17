@@ -6,7 +6,6 @@ int main() {
 
     plecak Plecak;
     srand(time(NULL));
-    //while(!Plecak.is_full())
     int b;
     for(int i=0;i<20;i++)
     {
@@ -45,7 +44,7 @@ int main() {
                 Plecak.pack(c);
         }
     }
-    Plecak.print_out();
+    Plecak.print_out();// zasem z nieznanych mi przyczyn zamieniają się miejsami np.:sliwowica z wodą
     Plecak.sorting();
     cout<<"sorted"<<endl;
     Plecak.print_out();

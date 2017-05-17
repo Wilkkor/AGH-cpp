@@ -23,7 +23,7 @@ private:
 class plecak {
 private:
     int free_space = 20;
-    vector<prowiantref> products;
+    vector<prowiantref> products;//domyślny refferencewrapper nie chciał przyjąć niekompletnej klasy plecak
 
 public:
     bool is_full();
