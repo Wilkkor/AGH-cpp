@@ -6,30 +6,32 @@
 #define JUWENALIA_PLECAK_H
 
 #include <iostream>
-//#include "prowiant.h"
+#include "prowiant.h"
 #include <vector>
 using namespace std;
-class prowiant {
-private:
-    int alkoholPrec;
-    string name;
+class prowiantref {
 public:
-    void set_alkoholPrec(int);
-    int get_alkoholPrec() const;
-
-    void set_name(string);
-    string get_name() const;
+    prowiantref(prowiant &prowiant) : prowiant_{&prowiant} {}
+    //zdefiniowany operator rzutujący na referencję
+    //przez co typu można używać jak referencji
+    operator prowiant&() {
+        return *prowiant_;
+    }
+private:
+    prowiant *prowiant_;
 };
 class plecak {
 private:
     int free_space = 20;
-    vector<reference_wrapper<prowiant>> products;
+    vector<prowiantref> products;
 
 public:
     bool is_full();
+    bool is_empty();
     void pack(prowiant);
+    prowiant unpack();
     void print_out();
-
+    void sorting();
 };
 
 #endif //JUWENALIA_PLECAK_H

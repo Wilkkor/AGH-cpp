@@ -62,6 +62,6 @@ vodka :: vodka() {
 
 sliwowica :: sliwowica() {
     set_alkoholPrec(70);
-    set_name("Śliwka");
+    set_name("Sliwka");
 };
 
