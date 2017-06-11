@@ -7,7 +7,7 @@
 #include <chrono>
 #include <gtest/gtest.h>
 #include <MemLeakTest.h>
-#include "TimeRecorder.h"
+#include "../../lab12/timerecorder/TimeRecorder.h"
 
 using ::profiling::TimeRecorder;
 using ::std::literals::string_literals::operator ""s;
